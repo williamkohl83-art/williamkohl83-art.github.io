@@ -414,6 +414,108 @@ footer{
 .sep{display:flex;align-items:center;gap:1rem;margin:0 auto 0;max-width:1400px;padding:0 clamp(1.5rem,5vw,5rem)}
 .sep-line{flex:1;height:1px;background:linear-gradient(to right,transparent,rgba(200,136,58,0.2),transparent)}
 .sep-diamond{color:var(--copper);font-size:0.5rem}
+
+/* ── RESPONSIVE TABLET (max 1024px) ── */
+@media (max-width: 1024px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: calc(4.5rem + 60px) clamp(1.5rem,4vw,3rem) 3rem;
+    gap: 2rem;
+    text-align: center;
+  }
+  h1.hn .fn { font-size: clamp(3rem,8vw,4.5rem) }
+  h1.hn .ln { font-size: clamp(3.5rem,9vw,5rem) }
+  .hero-pills { justify-content: center }
+  .hero-desc { margin: 0 auto 2.5rem; text-align: left }
+  .hero-ctas { justify-content: center }
+  .tagline { text-align: left }
+  .stats-row { justify-content: center; flex-wrap: wrap; gap: 1.5rem }
+  .hero-right { order: -1 }
+  .photo-container { width: clamp(160px,40vw,240px); margin: 0 auto }
+  .kw-box { width: clamp(160px,40vw,240px); margin: 0 auto }
+  .profil-grid { grid-template-columns: 1fr; gap: 2.5rem }
+  .sk-grid { grid-template-columns: 1fr 1fr }
+  .fo-grid { grid-template-columns: 1fr }
+  .lt-grid { grid-template-columns: 1fr; gap: 2.5rem }
+  .ct-grid { grid-template-columns: 1fr }
+  .id-band-inner { grid-template-columns: 1fr }
+  .id-col+.id-col::before { display: none }
+  .mgmt-cards { grid-template-columns: 1fr }
+}
+
+/* ── RESPONSIVE MOBILE (max 640px) ── */
+@media (max-width: 640px) {
+  /* Nav mobile */
+  nav { padding: 0.8rem 1.2rem }
+  .nav-links { display: none }
+  .nav-wordmark { font-size: 0.85rem; letter-spacing: 0.12em }
+  .nav-status { font-size: 0.5rem; padding: 0.25rem 0.7rem }
+
+  /* Hero mobile */
+  .hero {
+    padding: calc(4rem + 50px) 1.2rem 2.5rem;
+    gap: 1.5rem;
+  }
+  h1.hn .fn { font-size: clamp(2.8rem,12vw,3.5rem) }
+  h1.hn .ln { font-size: clamp(3.2rem,14vw,4rem) }
+  .tagline { font-size: 0.95rem; padding-left: 0.9rem }
+  .hero-desc { font-size: 0.82rem }
+  .hero-pills { gap: 0.4rem }
+  .pill { font-size: 0.52rem; padding: 0.3rem 0.7rem }
+  .stats-row { gap: 1rem }
+  .stat-item { border-left-width: 1.5px; padding-left: 0.8rem }
+  .stat-n { font-size: clamp(1.5rem,6vw,2rem) }
+  .stat-l { font-size: 0.5rem }
+  .photo-container { width: clamp(140px,50vw,200px) }
+  .kw-box {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Sections */
+  section { padding: 3rem 1.2rem }
+  .sh-title { font-size: clamp(1.5rem,6vw,2rem) }
+
+  /* Compétences : 1 colonne sur mobile */
+  .sk-grid { grid-template-columns: 1fr }
+  .sk { padding: 1.5rem }
+
+  /* Expériences : simplifie la timeline */
+  .xp-item { grid-template-columns: 80px 1fr }
+  .xp-left { padding: 1.5rem 1rem 1.5rem 0 }
+  .xp-right { padding: 1.5rem 0 1.5rem 1.2rem }
+  .xp-co { font-size: 1.2rem }
+  .xp-metrics { gap: 0.4rem }
+  .xm { font-size: 0.6rem; padding: 0.3rem 0.6rem }
+  .xm-n { font-size: 0.85rem }
+  .mgmt-cards { grid-template-columns: 1fr }
+
+  /* Formations */
+  .fo-grid { grid-template-columns: 1fr }
+
+  /* Contact */
+  .ct-grid { grid-template-columns: 1fr }
+  .ct-inner { padding: 0 0.5rem }
+
+  /* Identity band */
+  .id-band-inner { grid-template-columns: 1fr }
+  .id-col { padding: 1.5rem 1.5rem }
+  .id-col+.id-col::before { display: none }
+
+  /* Footer */
+  footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.2rem }
+
+  /* Profil grid */
+  .profil-grid { grid-template-columns: 1fr; gap: 2rem }
+
+  /* Lang tools */
+  .lt-grid { grid-template-columns: 1fr; gap: 2rem }
+  .tools-grid { grid-template-columns: 1fr 1fr }
+
+  /* Hide floating deco on mobile (too distracting) */
+  .deco { display: none }
+}
+
 </style>
 </head>
 <body>
